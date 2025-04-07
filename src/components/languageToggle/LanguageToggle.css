@@ -1,0 +1,20 @@
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+}
+
+.language-toggle__option {
+  cursor: pointer;
+  padding: 0 4px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.language-toggle__option--active {
+  text-decoration: underline;
+  font-weight: 600;
+  color: white;
+}

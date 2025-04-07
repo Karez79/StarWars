@@ -1,0 +1,114 @@
+.notfound {
+  background-color: #1c0a39;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notfound__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 32px;
+  font-size: 0;
+}
+
+.notfound__digit {
+  font-size: 20rem;
+  font-weight: 700;
+  color: #ccc;
+  margin: 0 -50px;
+  font-family: sans-serif;
+}
+
+.notfound__image {
+  width: 450px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 10px;
+  animation: shake 0.5s infinite alternate;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(2px, -2px);
+  }
+
+  50% {
+    transform: translate(-2px, 2px);
+  }
+
+  75% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.notfound__text {
+  font-size: 2.5rem;
+  color: #ddd;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.notfound__buttons {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.notfound__button {
+  background-color: #68e188;
+  color: #000;
+  border: none;
+  padding: 24px 32px;
+  font-size: 1.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: sans-serif;
+}
+
+.notfound__button:hover {
+  background-color: #4fba6b;
+}
+
+@media (max-width: 742px) {
+  .notfound__digit {
+    font-size: 10rem;
+    margin: 0 -20px;
+  }
+
+  .notfound__image {
+    width: 200px;
+    margin: 0 5px;
+  }
+
+  .notfound__text {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .notfound__buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .notfound__button {
+    padding: 16px 24px;
+    font-size: 1.4rem;
+  }
+}

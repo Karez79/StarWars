@@ -1,0 +1,129 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1d2459 0%, #170231 100%);
+  padding: 128px 5% 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.home__content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home__text {
+  flex: 1 1 300px;
+  max-width: 516px;
+  color: #ffffff;
+}
+
+.home__title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.home__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 64px 0 0;
+}
+
+.home__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  width: 231px;
+  height: 66px;
+  background-color: #ffc500;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home__image-wrapper {
+  flex: 1 1 300px;
+  max-width: 700px;
+  transform: translateY(-30px);
+}
+
+.home__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1420px) {
+  .home__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .home__text {
+    width: 90%;
+    text-align: center;
+  }
+  .home__image-wrapper {
+    width: 90%;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    height: 100vh;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .home__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .home__text {
+    width: 100%;
+    text-align: center;
+  }
+  .home__image-wrapper {
+    width: 100%;
+    max-width: 400px;
+    transform: none;
+    overflow: hidden;
+  }
+  .home__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .home__title {
+    font-size: 48px;
+  }
+  .home__subtitle {
+    font-size: 16px;
+  }
+  .home__cta {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+.sw-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sw-loader__icon {
+  width: 80px;
+  height: 80px;
+  background: url('../../assets/404.svg') no-repeat center;
+  background-size: contain;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.sw-loader__text {
+  margin-top: 20px;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffeb3b;
+  font-size: 1.2rem;
+}
