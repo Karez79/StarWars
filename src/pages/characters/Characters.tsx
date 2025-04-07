@@ -18,9 +18,7 @@ const Characters: React.FC<CharactersProps> = ({ language }) => {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<Character | null>(null);
-
   const [filterValue, setFilterValue] = useState<FilterOption>('all');
-
   const loadedPagesRef = useRef<Set<string>>(new Set());
   const listRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +38,6 @@ const Characters: React.FC<CharactersProps> = ({ language }) => {
     const key = `${page}-${lang}`;
     if (loadedPagesRef.current.has(key)) return;
     loadedPagesRef.current.add(key);
-
     setLoading(true);
     try {
       const data = await fetchCharacters(page, lang);
