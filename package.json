@@ -31,7 +31,8 @@
   "bugs": {
     "url": "https://github.com/Karez79/StarWars/issues"
   },
-  "homepage": "https://Karez79.github.io/StarWars",
+  "homepage": "https://Karez79.github.io/StarWars/",
+
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
