@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './NotFound.css';
 import deathStarImg from '../../assets/404.svg';
 
@@ -13,7 +13,6 @@ const t = {
 };
 
 const NotFound: React.FC<NotFoundProps> = ({ language }) => {
-  const nav = useNavigate();
   const dict = language === 'wookiee' ? t.wookiee : t.en;
   return (
     <div className='notfound'>
@@ -24,12 +23,12 @@ const NotFound: React.FC<NotFoundProps> = ({ language }) => {
       </h1>
       <p className='notfound__text'>{dict.text}</p>
       <div className='notfound__buttons'>
-        <button className='notfound__button' onClick={() => nav(-1)}>
+        <button className='notfound__button' onClick={() => window.history.back()}>
           {dict.back}
         </button>
-        <button className='notfound__button' onClick={() => nav('/')}>
+        <Link to='/' className='notfound__button'>
           {dict.home}
-        </button>
+        </Link>
       </div>
     </div>
   );
