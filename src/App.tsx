@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const toggleLanguage = () => setLanguage((p) => (p === 'en' ? 'wookiee' : 'en'));
 
   return (
-    <Router basename='/StarWars'>
+    <Router>
       <Routes>
         <Route element={<Layout language={language} onToggleLanguage={toggleLanguage} />}>
           <Route path='/' element={<Home language={language} />} />
