@@ -19,10 +19,8 @@ const App: React.FC = () => {
   const [language, setLanguage] = useState<'en' | 'wookiee'>('en');
   const toggleLanguage = () => setLanguage((p) => (p === 'en' ? 'wookiee' : 'en'));
 
-  const basename = process.env.NODE_ENV === 'production' ? '/StarWars' : '/';
-
   return (
-    <Router basename={basename}>
+    <Router>
       <Routes>
         <Route element={<Layout language={language} onToggleLanguage={toggleLanguage} />}>
           <Route path='/' element={<Home language={language} />} />
