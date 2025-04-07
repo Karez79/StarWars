@@ -8,7 +8,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-
     publicPath: '/StarWars/',
   },
   resolve: {
@@ -42,7 +41,10 @@ module.exports = {
       template: './public/index.html',
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: './public/favicon.ico', to: 'favicon.ico' }],
+      patterns: [
+        { from: './public/favicon.ico', to: 'favicon.ico' },
+        { from: './public/index.html', to: '404.html' },
+      ],
     }),
   ],
 };
